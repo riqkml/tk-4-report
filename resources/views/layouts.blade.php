@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     @if(env('APP_ENV') == 'production')
-        <link href="https://cdn.statically.io/gh/irfanhkm/tp-2-login/8e1a93ac/public/css/app.css" rel="stylesheet">
+        <link href="https://cdn.statically.io/gh/irfanhkm/tk-3-crud/ffdaee88/public/css/app.css" rel="stylesheet">
     @else
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @endif
