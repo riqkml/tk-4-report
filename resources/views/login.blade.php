@@ -61,12 +61,6 @@
                     Sign in
                 </button>
             </div>
-
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <a href="{{ route('register') }}" class="font-medium text-indigo-600 hover:text-indigo-500">Register</a>
-                </div>
-            </div>
         </form>
     </div>
 </div>

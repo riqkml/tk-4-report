@@ -6,15 +6,21 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Staff extends Authenticatable {
+class Users extends Authenticatable {
 
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $table = "staffs";
+    protected $table = "users";
 
     protected $fillable = [
+        'name',
+        'ttl',
+        'gender',
+        'address',
+        'ktp_photo',
         'email',
         'password',
+        'type'
     ];
 
     protected $hidden = [
