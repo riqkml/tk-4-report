@@ -33,13 +33,9 @@
     @else
         {{--Buyer Menu--}}
         <div class="mt-8 space-y-6">
-            <a href="#"
+            <a href="{{ route('buyer.transaction.index') }}"
                class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                Items CRUD
-            </a>
-            <a href="#"
-               class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                Buy Items
+                Transactions
             </a>
             <form action="{{ route('logout') }}" method="POST">
                 @csrf

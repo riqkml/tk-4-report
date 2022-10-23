@@ -10,4 +10,8 @@ class Transaction extends Model
         'buyers_id',
         'total_price'
     ];
+
+    public function items() {
+        return $this->hasMany(TransactionItems::class, 'transaction_id');
+    }
 }

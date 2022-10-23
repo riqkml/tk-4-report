@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BuyerController;
+use App\Http\Controllers\BuyerTransactionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\LoginController;
@@ -26,4 +27,11 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.post');
 Route::middleware('auth')->group(function () {
     Route::resource('items', ItemController::class)->except(['show']);
     Route::resource('buyers', BuyerController::class);
+
+    Route::prefix('buyer/transaction')->group(function () {
+        Route::get('/', [BuyerTransactionController::class, 'index'])->name('buyer.transaction.index');
+        Route::get('/cart', [BuyerTransactionController::class, 'create'])->name('buyer.transaction.cart');
+        Route::post('/addCart/{id}', [BuyerTransactionController::class, 'addCart'])->name('buyer.transaction.addCart');
+        Route::post('/submitCart', [BuyerTransactionController::class, 'submitCart'])->name('buyer.transaction.submitCart');
+    });
 });
